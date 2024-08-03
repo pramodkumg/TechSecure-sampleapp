@@ -1,0 +1,33 @@
+
+
+"html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Web Application</title>
+</head>
+<body>
+<h1>Welcome to Sample Web Application</h1>
+<form action="process.php" method="post">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+
+﻿
+
+<input type="submit" value="Submit">
+</form>
+<div id="output"></div>
+</body>
+<script>
+// Simulated XSS vulnerability (unsafe)
+let userinput = "<img src='x' onerror='alert (\"XSS Attack! \")'>";
+document.getElementById("output").innerHTML = userinput;
+</script> </html>
+213
+
