@@ -26,8 +26,10 @@
 </body>
 <script>
 // Simulated XSS vulnerability (unsafe)
-let userinput = "<img src='x' onerror='alert (\"XSS Attack! \")'>";
-document.getElementById("output").innerHTML = userinput;
+
+// Simulated XSS vulnerability (safe) 
+let userInput = "";
+document.getElementById("output").textContent = userInput; 
 </script> </html>
 213
 
